@@ -13,5 +13,5 @@ phases:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image $IMAGE_REPO_NAME/$IMAGE_NAME:$CODEBUILD_RESOLVED_SOURCE_VERSION
-      - docker login --username=$DOCKER_USER --password=$DOCKER_PASS
+      - echo $DOCKER_PASS | docker login --username=$DOCKER_USER --password-stdin
       - docker push $IMAGE_REPO_NAME/$IMAGE_NAME:$CODEBUILD_RESOLVED_SOURCE_VERSION
