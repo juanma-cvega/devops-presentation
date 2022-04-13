@@ -9,6 +9,6 @@ public class DemoController {
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public String helloWorld() {
-        return "Hello world 2";
+        return "Hello world";
     }
 }
